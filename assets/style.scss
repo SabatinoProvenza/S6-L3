@@ -1,7 +1,123 @@
 @import "./partial/reset";
-@import "./partial/fonts";
 @import "./partial/colors";
+@import "./partial/fonts";
+@import "./partial/mixins";
+@import "./partial/spaces";
 @import "./partial/buttons";
 @import "./partial/animations";
-@import "./partial/spaces";
-@import "./partial/mixins";
+
+/* ----------------------------------
+   ✅ Layout generale
+----------------------------------- */
+body {
+  font-family: $font-main;
+  background-color: #ffffff;
+  color: $text-color;
+}
+
+.container {
+  width: 85%;
+  margin: auto;
+}
+
+img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* ----------------------------------
+   ✅ NAVBAR
+----------------------------------- */
+.navbar {
+  background-color: $bg-hero;
+  padding: 1.5rem 0;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-weight: 700;
+    font-size: $font-size-lg;
+    color: #1b0e0e;
+  }
+
+  nav ul {
+    display: flex;
+    gap: 2rem;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: $text-color;
+    font-size: $font-size-sm;
+    transition: 0.2s;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+/* ----------------------------------
+   ✅ HERO SECTION
+----------------------------------- */
+.hero {
+  background-color: $bg-hero;
+  padding: 4rem 0;
+
+  .hero-grid {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .hero-title {
+    @include title-big;
+    color: #1b0e0e;
+    @include fadeMove(1.2s, -25px, 0, 0.1s, fadeTitle);
+  }
+
+  .hero-subtitle {
+    font-size: $font-size-base;
+    max-width: 450px;
+    margin: 1rem 0 2rem;
+    color: $text-color;
+    line-height: 1.5em;
+    @include fadeMove(1.3s, -20px, 0, 0.2s, fadeSub);
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: 1rem;
+
+    button {
+      @include fadeMove(1.4s, -15px, 0, 0.3s, fadeBtn);
+    }
+  }
+
+  .hero-image img {
+    @include floating(15px, 0 15px 25px rgba(0, 0, 0, 0.4), 3px solid white);
+    @include fadeMove(1.5s, -30px, 0, 0.4s, fadeImg);
+  }
+}
+
+/* ----------------------------------
+   ✅ GALLERY SECTION
+----------------------------------- */
+.gallery {
+  padding: 4rem 0;
+  background: white;
+
+  .image-grid {
+    @include grid(4);
+
+    img {
+      @include floating(12px);
+    }
+  }
+}

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -131,4 +132,288 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+.padding-block-sm {
+  padding-block: 0.5rem;
+}
+
+.padding-inline-sm {
+  padding-inline: 0.5rem;
+}
+
+.margin-block-sm {
+  margin-block: 0.5rem;
+}
+
+.margin-inline-sm {
+  margin-inline: 0.5rem;
+}
+
+.padding-block-normal {
+  padding-block: 1rem;
+}
+
+.padding-inline-normal {
+  padding-inline: 1rem;
+}
+
+.margin-block-normal {
+  margin-block: 1rem;
+}
+
+.margin-inline-normal {
+  margin-inline: 1rem;
+}
+
+.padding-block-md {
+  padding-block: 2rem;
+}
+
+.padding-inline-md {
+  padding-inline: 2rem;
+}
+
+.margin-block-md {
+  margin-block: 2rem;
+}
+
+.margin-inline-md {
+  margin-inline: 2rem;
+}
+
+.padding-block-lg {
+  padding-block: 3rem;
+}
+
+.padding-inline-lg {
+  padding-inline: 3rem;
+}
+
+.margin-block-lg {
+  margin-block: 3rem;
+}
+
+.margin-inline-lg {
+  margin-inline: 3rem;
+}
+
+.padding-block-xl {
+  padding-block: 4rem;
+}
+
+.padding-inline-xl {
+  padding-inline: 4rem;
+}
+
+.margin-block-xl {
+  margin-block: 4rem;
+}
+
+.margin-inline-xl {
+  margin-inline: 4rem;
+}
+
+.padding-block-xxl {
+  padding-block: 6rem;
+}
+
+.padding-inline-xxl {
+  padding-inline: 6rem;
+}
+
+.margin-block-xxl {
+  margin-block: 6rem;
+}
+
+.margin-inline-xxl {
+  margin-inline: 6rem;
+}
+
+.btn-primary {
+  background-color: #0e6cff;
+  color: white;
+  padding: 0.75em 1.5em;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-warning {
+  background-color: #ff8700;
+  color: white;
+  padding: 0.75em 1.5em;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-success {
+  background-color: #4caf50;
+  color: white;
+  padding: 0.75em 1.5em;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* ----------------------------------
+   ✅ Layout generale
+----------------------------------- */
+body {
+  font-family: "poppins", sans-serif;
+  background-color: #ffffff;
+  color: #f4f4f4;
+}
+
+.container {
+  width: 85%;
+  margin: auto;
+}
+
+img {
+  width: 100%;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* ----------------------------------
+   ✅ NAVBAR
+----------------------------------- */
+.navbar {
+  background-color: #640fc5;
+  padding: 1.5rem 0;
+}
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar .logo {
+  font-weight: 700;
+  font-size: 1.5em;
+  color: #1b0e0e;
+}
+.navbar nav ul {
+  display: flex;
+  gap: 2rem;
+}
+.navbar nav a {
+  text-decoration: none;
+  color: #f4f4f4;
+  font-size: 0.875em;
+  transition: 0.2s;
+}
+.navbar nav a:hover {
+  opacity: 0.7;
+}
+
+/* ----------------------------------
+   ✅ HERO SECTION
+----------------------------------- */
+.hero {
+  background-color: #640fc5;
+  padding: 4rem 0;
+}
+.hero .hero-grid {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 3rem;
+}
+.hero .hero-title {
+  font-family: "poppins", sans-serif;
+  font-size: 3.55em;
+  font-weight: 700;
+  color: #f4f4f4;
+  line-height: 1.1;
+  color: #1b0e0e;
+  animation: fadeTitle 1.2s ease forwards;
+  animation-delay: 0.1s;
+}
+@keyframes fadeTitle {
+  0% {
+    opacity: 0;
+    transform: translateY(-25px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.hero .hero-subtitle {
+  font-size: 1em;
+  max-width: 450px;
+  margin: 1rem 0 2rem;
+  color: #f4f4f4;
+  line-height: 1.5em;
+  animation: fadeSub 1.3s ease forwards;
+  animation-delay: 0.2s;
+}
+@keyframes fadeSub {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.hero .hero-buttons {
+  display: flex;
+  gap: 1rem;
+}
+.hero .hero-buttons button {
+  animation: fadeBtn 1.4s ease forwards;
+  animation-delay: 0.3s;
+}
+@keyframes fadeBtn {
+  0% {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.hero .hero-image img {
+  border-radius: 15px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4);
+  border: 3px solid white;
+  animation: fadeImg 1.5s ease forwards;
+  animation-delay: 0.4s;
+}
+@keyframes fadeImg {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ----------------------------------
+   ✅ GALLERY SECTION
+----------------------------------- */
+.gallery {
+  padding: 4rem 0;
+  background: white;
+}
+.gallery .image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.gallery .image-grid img {
+  width: calc(25% - 1rem);
+}
+.gallery .image-grid img {
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  border: none;
 }/*# sourceMappingURL=style.css.map */
